@@ -14,6 +14,11 @@
 		6D1A7D1923E48B9100709845 /* SampleMapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A7D1723E48B9100709845 /* SampleMapApp.xcdatamodeld */; };
 		6D1A7D1B23E48B9300709845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D1A7D1A23E48B9300709845 /* Assets.xcassets */; };
 		6D1A7D1E23E48B9300709845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1A7D1C23E48B9300709845 /* LaunchScreen.storyboard */; };
+		6D1A7D2723E4936900709845 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1A7D2623E4936900709845 /* MapKit.framework */; };
+		6D1A7D2923E5A92700709845 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1A7D2823E5A92700709845 /* CoreLocation.framework */; };
+		6D1A7D2C23E6FC6C00709845 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A7D2B23E6FC6C00709845 /* CustomAnnotationView.swift */; };
+		6D1A7D2E23E6FCB000709845 /* CustomAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1A7D2D23E6FCB000709845 /* CustomAnnotationView.xib */; };
+		6D45C74323EDD165008A9C8A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45C74223EDD165008A9C8A /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		6D1A7D1A23E48B9300709845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D1A7D1D23E48B9300709845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D1A7D1F23E48B9300709845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D1A7D2623E4936900709845 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6D1A7D2823E5A92700709845 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6D1A7D2B23E6FC6C00709845 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		6D1A7D2D23E6FCB000709845 /* CustomAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAnnotationView.xib; sourceTree = "<group>"; };
+		6D45C74223EDD165008A9C8A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D1A7D2923E5A92700709845 /* CoreLocation.framework in Frameworks */,
+				6D1A7D2723E4936900709845 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +56,7 @@
 			children = (
 				6D1A7D0D23E48B9100709845 /* SampleMapApp */,
 				6D1A7D0C23E48B9100709845 /* Products */,
+				6D1A7D2523E4936900709845 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +71,7 @@
 		6D1A7D0D23E48B9100709845 /* SampleMapApp */ = {
 			isa = PBXGroup;
 			children = (
+				6D1A7D2A23E6FC2200709845 /* view */,
 				6D1A7D0E23E48B9100709845 /* AppDelegate.swift */,
 				6D1A7D1023E48B9100709845 /* SceneDelegate.swift */,
 				6D1A7D1223E48B9100709845 /* ViewController.swift */,
@@ -68,6 +82,25 @@
 				6D1A7D1723E48B9100709845 /* SampleMapApp.xcdatamodeld */,
 			);
 			path = SampleMapApp;
+			sourceTree = "<group>";
+		};
+		6D1A7D2523E4936900709845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D1A7D2823E5A92700709845 /* CoreLocation.framework */,
+				6D1A7D2623E4936900709845 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D1A7D2A23E6FC2200709845 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6D1A7D2B23E6FC6C00709845 /* CustomAnnotationView.swift */,
+				6D1A7D2D23E6FCB000709845 /* CustomAnnotationView.xib */,
+				6D45C74223EDD165008A9C8A /* CustomTableViewCell.swift */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +163,7 @@
 			files = (
 				6D1A7D1E23E48B9300709845 /* LaunchScreen.storyboard in Resources */,
 				6D1A7D1B23E48B9300709845 /* Assets.xcassets in Resources */,
+				6D1A7D2E23E6FCB000709845 /* CustomAnnotationView.xib in Resources */,
 				6D1A7D1623E48B9100709845 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D45C74323EDD165008A9C8A /* CustomTableViewCell.swift in Sources */,
+				6D1A7D2C23E6FC6C00709845 /* CustomAnnotationView.swift in Sources */,
 				6D1A7D1323E48B9100709845 /* ViewController.swift in Sources */,
 				6D1A7D0F23E48B9100709845 /* AppDelegate.swift in Sources */,
 				6D1A7D1923E48B9100709845 /* SampleMapApp.xcdatamodeld in Sources */,
@@ -298,7 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.poropi.SampleMapApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -316,7 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.poropi.SampleMapApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

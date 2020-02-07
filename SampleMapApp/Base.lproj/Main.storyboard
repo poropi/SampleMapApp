@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,101 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleMapApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-Yd-TmX">
+                                <rect key="frame" x="0.0" y="0.0" width="683" height="1024"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-uu-wiN">
+                                        <rect key="frame" x="0.0" y="0.0" width="683" height="1024"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="datacell" rowHeight="230" id="gbX-ip-n9A" customClass="CustomTableViewCell" customModule="SampleMapApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="683" height="230"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gbX-ip-n9A" id="rzj-NG-s2I">
+                                                    <rect key="frame" x="0.0" y="0.0" width="683" height="230"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テストだよ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pb-8S-MRv">
+                                                            <rect key="frame" x="69" y="87.5" width="231.5" height="55"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUL-id-HAB">
+                                                            <rect key="frame" x="518" y="87" width="142" height="54"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                            <state key="normal" title="ボターン"/>
+                                                            <connections>
+                                                                <action selector="onClick:" destination="gbX-ip-n9A" eventType="touchUpInside" id="Q2K-NN-6xu"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="6pb-8S-MRv" firstAttribute="centerY" secondItem="rzj-NG-s2I" secondAttribute="centerY" id="Dvd-2l-bC7"/>
+                                                        <constraint firstItem="6pb-8S-MRv" firstAttribute="leading" secondItem="rzj-NG-s2I" secondAttribute="leadingMargin" constant="54" id="mWz-ab-wLe"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="7fd-Uq-Vct"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="fiW-4x-OwB"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tN4-uu-wiN" secondAttribute="bottom" id="DaN-BJ-bIJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tN4-uu-wiN" secondAttribute="trailing" id="J37-JE-3wS"/>
+                                    <constraint firstItem="tN4-uu-wiN" firstAttribute="top" secondItem="I2g-Yd-TmX" secondAttribute="top" id="o9U-3Z-39j"/>
+                                    <constraint firstItem="tN4-uu-wiN" firstAttribute="leading" secondItem="I2g-Yd-TmX" secondAttribute="leading" id="vuT-rY-8yJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fo-GQ-1sB">
+                                <rect key="frame" x="691" y="0.0" width="675" height="1024"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-xp-n7o">
+                                        <rect key="frame" x="0.0" y="0.0" width="675" height="1024"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SdC-xp-n7o" secondAttribute="bottom" id="4la-eE-1nq"/>
+                                    <constraint firstAttribute="trailing" secondItem="SdC-xp-n7o" secondAttribute="trailing" id="GC7-5M-Y5k"/>
+                                    <constraint firstItem="SdC-xp-n7o" firstAttribute="top" secondItem="4Fo-GQ-1sB" secondAttribute="top" id="Pm3-iu-bZe"/>
+                                    <constraint firstItem="SdC-xp-n7o" firstAttribute="top" secondItem="4Fo-GQ-1sB" secondAttribute="top" id="TaG-di-9M6"/>
+                                    <constraint firstItem="SdC-xp-n7o" firstAttribute="leading" secondItem="4Fo-GQ-1sB" secondAttribute="leading" id="UWF-q6-1Ah"/>
+                                    <constraint firstAttribute="bottom" secondItem="SdC-xp-n7o" secondAttribute="bottom" id="kyZ-P7-Efn"/>
+                                    <constraint firstItem="SdC-xp-n7o" firstAttribute="leading" secondItem="4Fo-GQ-1sB" secondAttribute="leading" id="s9g-lq-y7w"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I2g-Yd-TmX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="A8m-Am-VbT"/>
+                            <constraint firstItem="I2g-Yd-TmX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cvg-ZN-AQA"/>
+                            <constraint firstItem="I2g-Yd-TmX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D0G-HN-ehl"/>
+                            <constraint firstItem="4Fo-GQ-1sB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hvb-Jd-EYX"/>
+                            <constraint firstItem="4Fo-GQ-1sB" firstAttribute="leading" secondItem="I2g-Yd-TmX" secondAttribute="trailing" constant="8" symbolic="YES" id="Vln-9m-Zxq"/>
+                            <constraint firstItem="4Fo-GQ-1sB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cCk-Vt-pNH"/>
+                            <constraint firstItem="4Fo-GQ-1sB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lXc-Or-MsX"/>
+                            <constraint firstAttribute="bottom" secondItem="I2g-Yd-TmX" secondAttribute="bottom" id="mhz-RA-EOy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mkMapView" destination="SdC-xp-n7o" id="gIg-5d-Xd6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8359375" y="138.28125"/>
         </scene>
     </scenes>
 </document>
